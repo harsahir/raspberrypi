@@ -12,18 +12,18 @@ ENV CHIP=${CHIP}
 ################################# DEFINE RUNTYPE: 0=Production using Kafka Cloud, 1=Development using local data file: cisco_network_data.txt
 #####  pass in docker build and run (--env RUNTYPE=0 to override)
 
-ENV RUNTYPE=1
+ENV RUNTYPE=2
 RUN export RUNTYPE
 
 ENV VIPERVIZPORT=9000
 RUN export VIPERVIZPORT
 
-ENV BROKERHOSTPORT=127.0.0.1:9092
+ENV BROKERHOSTPORT=pkc-12576z.us-west2.gcp.confluent.cloud:9092
 RUN export BROKERHOSTPORT
 
-ENV CLOUDUSERNAME=""
+ENV CLOUDUSERNAME="JOXL5RTWGW5ETJSP"
 RUN export CLOUDUSERNAME
-ENV CLOUDPASSWORD=""
+ENV CLOUDPASSWORD="Ks9Ryqrk3VpohhagYfetl3lcP3lioCCQCqdb6PeJQY35soGFn99D001uYEvZMrWT"
 RUN export CLOUDPASSWORD
 
 ENV HACKEDHOSTS="5.11-i,5.16-i,6.17-i"
